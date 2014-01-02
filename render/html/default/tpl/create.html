@@ -1,0 +1,22 @@
+
+JS_REQUIRE=autocompletion
+JS_REQUIRE=associate
+
+<form action="#" method="post">
+	<button onclick="create('{FORM_CREATE_ASSOCIATE_ID}')" />{FORM_CREATE_ASSOCIATE_ID_ACTION}</button>
+	<fieldset>
+		<legend>{FORM_CREATE_ASSOCIATE_ID_LEGEND}</legend>
+		<div id="{FORM_CREATE_ASSOCIATE_ID}[attributs][create][msg]"></div>
+		<input type="text" id="{FORM_CREATE_ASSOCIATE_ID}[attributs][title]" name="{FORM_CREATE_ASSOCIATE_ID}[attributs][title]" placeholder="{FORM_CREATE_ASSOCIATE_TITLE_LABEL}" required /><br />
+		<label for="{FORM_CREATE_ASSOCIATE_ID}[attributs][pt]">{FORM_CREATE_ASSOCIATE_PT_LABEL}</label>
+		<input type="range" min="0" max="200000" step="1" value="0" id="{FORM_CREATE_ASSOCIATE_ID}[attributs][pt]" name="{FORM_CREATE_ASSOCIATE_ID}[attributs][pt]" required />
+		<br />
+		<label for="{FORM_CREATE_ASSOCIATE_ID}[attributs][pt_ratio]">{FORM_CREATE_ASSOCIATE_PTRATIO_LABEL}</label>
+		<input type="range" id="{FORM_CREATE_ASSOCIATE_ID}[attributs][pt_ratio]"  min="0" max="200000" step="1" value="100" name="{FORM_CREATE_ASSOCIATE_ID}[attributs][pt_ratio]"  required />
+		<br />
+		<input type="checkbox" id="{FORM_CREATE_ASSOCIATE_ID}[attributs][required]" name="{FORM_CREATE_ASSOCIATE_ID}[attributs][required]" />
+		<label for="{FORM_CREATE_ASSOCIATE_ID}[attributs][required]">{FORM_CREATE_ASSOCIATE_REQUIRED}</label><br />
+	</fieldset>
+	{FORM_CREATE_ASSOCIATE_FORMS}
+	<button onclick="create('{FORM_CREATE_ASSOCIATE_ID}')" />{FORM_CREATE_ASSOCIATE_ID_ACTION}</button>
+</form>

@@ -1,0 +1,14 @@
+
+JS_REQUIRE=autocompletion
+JS_REQUIRE=create
+
+<fieldset>
+	<legend>{FORM_ASSOCIATE_LEGEND}</legend>
+	<div id="{FORM_ASSOCIATE_ID}[associate][{FORM_ASSOCIATE_ID}][msg]"></div>
+	<div id="{FORM_ASSOCIATE_ID}[associate][{FORM_ASSOCIATE_ID}][associated]"></div>
+	<input list="{FORM_ASSOCIATE_ID}[associate][{FORM_ASSOCIATE_ID}][list]" id="{FORM_ASSOCIATE_ID}[associate][{FORM_ASSOCIATE_ID}][autocompletion]" name="{FORM_ASSOCIATE_ID}[associate][{FORM_ASSOCIATE_ID}][autocompletion]" placeholder="{FORM_ASSOCIATE_AUTOCOMPLETION_PLACEHOLDER}" />
+	<datalist id="{FORM_ASSOCIATE_ID}[associate][{FORM_ASSOCIATE_ID}][list]" name="{FORM_ASSOCIATE_ID}[associate][{FORM_ASSOCIATE_ID}][list]" multiple onclick="autocompletion_select(\'{FORM_ASSOCIATE_ID}[associate][{FORM_ASSOCIATE_ID}]\')">
+		{FORM_ASSOCIATE_LIST}
+	</datalist>
+	<button onclick="associate_create('{FORM_ASSOCIATE_ID}')" />{FORM_ASSOCIATE_ACTION}</button>
+</fieldset>
