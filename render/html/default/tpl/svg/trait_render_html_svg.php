@@ -25,9 +25,11 @@ trait render_html_svg{
 
 			$script															= $base_dir.DIRECTORY_SEPARATOR.$v.$this->render_html_svg_ext;
 			$script											 				= str_replace(DIRECTORY_SEPARATOR, '/', $script);
-			$this->render_vars[$this->render_html_svg_tag][strtoupper($v)] 	= '
-					<embed id="'.$this->render_html_svg_tag.'_'.strtoupper($v).'" src="'.$script.'" type="image/svg+xml"
-pluginspage="http://www.adobe.com/svg/viewer/install/" />'."\n";
+			$contentA 														= file_get_contents($script)."\n";
+			$contentA 														= explode('dtd">', $contentA);
+			unset($contentA[0]);
+			$contentA 														= implode('dtd">', $contentA);
+			$this->render_vars[$this->render_html_svg_tag][strtoupper($v)] 	= $contentA;
 
 			unset($content[$k]);
 		}

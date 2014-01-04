@@ -4,7 +4,7 @@ function initialize() {
     zoom: 13,
     center: new google.maps.LatLng(-25.363882,131.044922)
   };
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
+  var map = new google.maps.Map(document.getElementById('map_canvas'),
       mapOptions);
 
 if(navigator.geolocation) {
@@ -56,3 +56,5 @@ function placeMarker(position, map) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+

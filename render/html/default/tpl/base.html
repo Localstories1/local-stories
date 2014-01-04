@@ -1,7 +1,6 @@
 render_var_add:HEADER_NAV_0_LINKS=
 render_var_add:HEADER_NAV_1_LINKS=
 render_var_add:DOC_TITLE_1=HAPPENSTANCE - The experience of increased trade
-render_var_add:DOC_CSS_1_LINK=defaut4.css
 render_var_add:HEADER_LINK_1_IMG=logo.png
 render_var_add:HEADER_NAV0_LINK_1_TITLE=HAPPENSTANCE - The experience of increased trade
 render_var_add:HEADER_NAV0_LINK_1_LINK=index.php
@@ -85,9 +84,7 @@ JS_REQUIRE=hidden
 JS_REQUIRE=websocket
 JS_REQUIRE=geo
 
-CSS_REQUIRE=geo
 CSS_REQUIRE=base
-
 
 IMG_REQUIRE=logo
 SVG_REQUIRE=main
@@ -215,9 +212,11 @@ SVG_REQUIRE=main
 		 <script type="text/javascript"
 	      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB60l6eLOSvaG7KcCgbCUotsfsgHK-BShQ&sensor=false">
 	    </script>
+		
 		{STATIC_JS}
+		
 	</head>
-	<body onload="update()">
+	<body>
 		<header>
 			<div role="banner">
 				{STATIC_IMG_LOGO}
@@ -256,7 +255,7 @@ SVG_REQUIRE=main
 		</aside>
 		<article>
 			{STATIC_SVG_MAIN}
-			{SECTION}
+			
 		</article>
 		<footer>
 			{TPL:contact}
