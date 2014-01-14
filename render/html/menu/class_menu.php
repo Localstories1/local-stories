@@ -6,12 +6,14 @@ class menu extends \www\www\render\html {
 	CONST ID_BASE 	= 'menu_';
 	CONST DIR 		= 'menu';
 
-	private $tpl_menu_dir;
-
-	public function menu_load($val){
+	public function load($val){
 
 		$this->dir 	= $this->resouce_dir.DIRECTORY_SEPARATOR.self::DIR;
 		$class 		= 'h4';
+
+		echo '<pre>';
+		var_export($this->vars, true);
+		echo '</pre>';
 
 		foreach($this->vars as $var => $tpl){
 
@@ -33,7 +35,7 @@ class menu extends \www\www\render\html {
 		}
 		return true;
 	}
-	public function menu_compile(){
+	public function compile(){
 
 		if(is_string($var->val) === true) return $this->val;
 

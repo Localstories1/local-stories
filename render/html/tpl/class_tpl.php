@@ -3,9 +3,15 @@ namespace www\www\render\html;
 
 class tpl extends \www\www\render\html {
 
+	CONST ID_BASE 	= 'tpl_';
+	CONST DIR 		= 'tpl';
+	CONST EXT 		= '.html';
+
 	public function load($val){
 
-		$this->val = file_get_contents($val);
+		$this->dir 	= $this->resouce_dir.DIRECTORY_SEPARATOR.self::DIR;
+		$val 		= $this->dir.'/'.$val.self::EXT;
+		$this->val 	= file_get_contents($val);
 
 		return $this->val;
 	}

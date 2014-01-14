@@ -1,7 +1,7 @@
 <?php
 namespace www\www;
 
-class render {
+abstract class render {
 
 	public static $tpl_dir;
 	public static $tpl_env;
@@ -30,6 +30,9 @@ class render {
 	public $vars 						= array();
 	public $resouce_dir;
 
+	protected $dir;
+	protected $file;
+
 	CONST VAR_PREFIX					= '';
 	CONST TPL_EXT_DESC					= '.csv';
 	CONST TPL_VAR_TAG 					= 'VAR:';
@@ -52,11 +55,11 @@ class render {
 	}
 	public function load_desc(){
 
-		$desc = self::$tpl_dir.DIRECTORY_SEPARATOR.$this->basename.self::TPL_EXT_DESC;
+		$tmp 	= explode('\\', get_class($this));
+		$dir 	= end($tmp);
+		$desc 	= $this->resouce_dir.DIRECTORY_SEPARATOR.$dir.DIRECTORY_SEPARATOR.$this->basename.self::TPL_EXT_DESC;
 
 		if(is_file($desc) === false) return true;
-
-		echo __CLASS__.' '.__LINE__.' '.highlight_string($desc, true).'<br/>';
 
 		$this->desc_file 	= $desc;
 		$tpl_vars 			= file_get_contents($desc);
@@ -109,7 +112,8 @@ class render {
 		}
 		foreach($tpl_vars as $var => $tpl){
 
-			$this->vars[$var] = $tpl->compile();
+			$tpl->compile();
+			$this->vars[$var] = $tpl;
 		}
 		echo '<pre>';
 		print_r($this->vars);

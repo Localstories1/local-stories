@@ -7,9 +7,6 @@ class svg extends \www\www\render\html {
 	CONST DIR 		= 'svg';
 	CONST EXT 		= '.svg';
 
-	private $dir;
-	private $file;
-
 	public function load($val){
 
 		$this->dir 	= $this->resouce_dir.DIRECTORY_SEPARATOR.self::DIR;

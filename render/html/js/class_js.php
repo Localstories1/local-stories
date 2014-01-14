@@ -7,9 +7,6 @@ class js extends \www\www\render\html {
 	CONST DIR 		= 'js';
 	CONST EXT 		= '.js';
 
-	private $dir;
-	private $file;
-
 	public function txt_load($val){
 
 		$this->dir 	= $this->resouce_dir.DIRECTORY_SEPARATOR.self::DIR;

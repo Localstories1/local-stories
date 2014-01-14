@@ -6,9 +6,6 @@ class img extends \www\www\render\html {
 	CONST ID_BASE 	= 'img_';
 	CONST DIR 		= 'img';
 
-	private $dir;
-	private $file;
-
 	public function load($val){
 
 		$this->dir 	= $this->resouce_dir.DIRECTORY_SEPARATOR.self::DIR;

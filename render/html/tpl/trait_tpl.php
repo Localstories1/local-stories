@@ -32,8 +32,6 @@ trait trait_tpl{
 
 		if($val !== false) $this->tpl = $val;
 
-		echo __CLASS__.' '.__LINE__.' '.$this->tpl.'<br/>';
-
 		tpl::$tpl_dir 	= dirname(__FILE__);
 		tpl::$tpl_env 	= $this->tpl_env;
 		tpl::$tpl_render= $this->tpl_render;
@@ -41,9 +39,8 @@ trait trait_tpl{
 		tpl::$tpl_page 	= $this->tpl_page;
 		tpl::$tpl_lang 	= $this->tpl_lang;
 		$var 			= new tpl($this->tpl);
-		$val 			= $this->tpl_base_dir.DIRECTORY_SEPARATOR.$this->tpl.self::$TPL_EXT;
 
-		$var->load($val);
+		$var->load($this->tpl);
 		$var->compile();
 
 		if($this->tpl_out === '') $this->tpl_out = $var->val;
