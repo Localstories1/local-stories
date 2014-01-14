@@ -7,7 +7,7 @@ class css extends \www\www\render\html {
 	CONST DIR 		= 'css';
 	CONST EXT 		= '.css';
 
-	public function txt_load($val){
+	public function load($val){
 
 		$this->dir 	= $this->resouce_dir.DIRECTORY_SEPARATOR.self::DIR;
 		$this->file = $this->dir.DIRECTORY_SEPARATOR.$val.self::EXT;

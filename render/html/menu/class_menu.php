@@ -23,13 +23,20 @@ class menu extends \www\www\render\html {
 
 		foreach($list as $tpl){
 
+			/*
+			echo '<pre>';
+			echo var_export($tpl, true);
+			echo '</pre>';
+			exit();
+			*/
 			if($this->index === 'true') $class = 'h3';
 
-			$link = 'index.php?page='.$this->id;
+			$id 	= self::ID_BASE.$tpl->id;
+			$link 	= 'index.php?page='.$this->id;
 
 			$this->val[$tpl->parent][$tpl->order] = '
 <li class="'.$class.'">
-	<a href="'.$link.'" id="'.self::ID_BASE.$tpl->id.'" name="'.self::ID_BASE.$tpl->id.'">'.$this->val.'</a>
+	<a href="'.$link.'" id="'.$id.'" name="'.$id.'">'.$tpl->val.'</a>
 </li>
 '."\n";
 		}
@@ -37,7 +44,7 @@ class menu extends \www\www\render\html {
 	}
 	public function compile(){
 
-		if(is_string($var->val) === true) return $this->val;
+		if(is_string($this->val) === true) return $this->val;
 
 		$val = '';
 
@@ -45,10 +52,7 @@ class menu extends \www\www\render\html {
 
 			ksort($links);
 
-			foreach($links as $id => $link){
-
-				$val .= '<nav><ul>'.$link.'</ul></nav>'."\n";
-			}
+			$val .= '<nav><ul>'.implode("\n", $links).'</ul></nav>'."\n";
 		}
 		$this->val = $val;
 

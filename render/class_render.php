@@ -99,11 +99,11 @@ abstract class render {
 			$tpl->tags 			= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[5]));
 			$tpl->profils 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[6]));
 			$tpl->compaigns 	= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[7]));
-			$tpl->themes 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[7]));
-			$tpl->locates 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[8]));
-			$tpl->order 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[9]);
-			$tpl->parent 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[10]);
-			$tpl->index 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[11]);
+			$tpl->themes 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[8]));
+			$tpl->locates 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[9]));
+			$tpl->order 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[10]);
+			$tpl->parent 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[11]);
+			$tpl->index 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[12]);
 			$tpl->basename  	= $tpl->var;
 
 			$tpl->load($val);
@@ -115,10 +115,6 @@ abstract class render {
 			$tpl->compile();
 			$this->vars[$var] = $tpl;
 		}
-		echo '<pre>';
-		print_r($this->vars);
-		echo '</pre>';
-
 		return true;
 	}
 }

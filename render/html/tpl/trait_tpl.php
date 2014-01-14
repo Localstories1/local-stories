@@ -43,14 +43,18 @@ trait trait_tpl{
 		$var->load($this->tpl);
 		$var->compile();
 
-		if($this->tpl_out === '') $this->tpl_out = $var->val;
-echo $var->val;
-		return $var->val;
+		if($this->tpl_out === '') {
+
+			$this->tpl_out = $var->val;
+		}
+		return true;
 	}
 	public function tpl_out($out = false){
 
-		if($out === false) $out === $this->tpl_out;
+		if($out === false) {
 
+			$out = $this->tpl_out;
+		}
 		echo $out;
 	}
 }
