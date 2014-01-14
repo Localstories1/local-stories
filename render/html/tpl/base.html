@@ -1,94 +1,3 @@
-render_var_add:HEADER_NAV_0_LINKS=
-render_var_add:HEADER_NAV_1_LINKS=
-render_var_add:DOC_TITLE_1=HAPPENSTANCE - The experience of increased trade
-render_var_add:HEADER_LINK_1_IMG=logo.png
-render_var_add:HEADER_NAV0_LINK_1_TITLE=HAPPENSTANCE - The experience of increased trade
-render_var_add:HEADER_NAV0_LINK_1_LINK=index.php
-render_var_add:HEADER_TITLE_1=The experience of increased trade
-render_var_add:HEADER_TITLE_2=
-render_var_add:HEADER_TITLE_2=
-render_var_add:HEADER_TITLE_2=
-render_var_add:HEADER_CONTENT_1=
-render_var_add:HEADER_CONTENT_2=
-render_var_add:HEADER_TITLE_1=HAPPENSTANCE - The experience of increased trade
-render_var_add:DOC_CHARSET=utf-8
-render_var_add:HEADER_NAV_HEADER=
-render_var_add:DOC_LANG=FR
-render_var_add:ASIDE_TITLE=Faits marquants
-render_var_add:ASIDE_RESUME_1=Signalement 1
-render_var_add:ASIDE_RESUME_2=Signalement 2
-render_var_add:SECTION_HEADER_TILE_1=
-render_var_add:SECURITY_OWNER_NAME=Local Stories SASU – Happentance Brand
-render_var_add:FOOTER_NAV_HEADER=
-render_var_add:SECTION_ACTICLE_CONTENT=
-render_var_add:SECTION_HEADER_TITLE_1=
-render_var_add:HEADER_SCRIPTS=
-render_var_add:SECTION_HEADER_TITLE_2=
-render_var_add:SECTION_HEADER_CONTENT=
-render_var_add:SECTION_ARTICLE_HEADER_TITLE_1=
-render_var_add:SECTION_ARTICLE_HEADER_TITLE_2=
-render_var_add:SECTION_ARTICLE_HEADER_CONTENT_1=
-render_var_add:SECTION_ARTICLE_HEADER_CONTENT_2=
-render_var_add:SECTION_ACTICLE_CONTENT=
-render_var_add:DOC_TITLE_2=
-render_var_add:SECTION_HEADER_TILE_2=
-render_var_add:SECURITY_VERIFICATION_ALEXAVERIFID=
-render_var_add:SECURITY_VERIFICATION_NORTON=
-render_var_add:SECURITY_VERIFICATION_WOT=
-render_var_add:SECURITY_VERIFICATION_MARKOWEB=
-render_var_add:SECURITY_VERIFICATION_GOOGLE=
-render_var_add:SECURITY_CREATOR_NAME=
-render_var_add:SECURITY_LICENCE_NAME=MIT license
-render_var_add:SECURITY_LICENCE_REF=http://opensource.org/licenses/MIT
-render_var_add:KW_LIST_1=
-render_var_add:KW_LIST_2=
-render_var_add:KW_LIST_3=
-render_var_add:KW_LIST_4=
-render_var_add:STORY_COUNTRY_NAME=
-render_var_add:USER_CITY_NAME=
-render_var_add:USER_STREET_NUMBER=
-render_var_add:USER_STREET_TYPE=
-render_var_add:USER_STREET=
-render_var_add:USER_ICBM_LATTITUDE=
-render_var_add:USER_ICBM_LONGITUDE=
-render_var_add:DATE_W3C=
-render_var_add:APP_NAME=
-render_var_add:APP_VERSION=
-render_var_add:DOC_SERVER_NAME=
-render_var_add:DOC_USER_PROFIL_NAME=
-render_var_add:DOC_CSS_2_LINK=
-render_var_add:DOC_CSS_3_LINK=
-render_var_add:DOC_CSS_4_LINK=
-render_var_add:DOC_CSS_5_LINK=
-render_var_add:DOC_LOGO_94.png=
-render_var_add:DOC_LOGO_57.png=
-render_var_add:DOC_LOGO_48.png=
-render_var_add:DOC_LOGO_16.png=
-render_var_add:ASIDE_ELEM_LINK_1_LINK=
-render_var_add:ASIDE_ELEM_LINK_1_TITLE=
-render_var_add:ASIDE_ELEM_LINK_2_LINK=
-render_var_add:ASIDE_ELEM_LINK_2_TITLE=
-render_var_add:ASIDE_ELEM_LINK_3_LINK=
-render_var_add:ASIDE_ELEM_LINK_3_TITLE=
-render_var_add:ASIDE_ELEM_LINK_4_LINK=
-render_var_add:ASIDE_ELEM_LINK_4_TITLE=
-render_var_add:ASIDE_ELEM_LINK_5_LINK=
-render_var_add:ASIDE_ELEM_LINK_5_TITLE=
-render_var_add:SECTION_FOOTER_NAV_LINK_1_LINK=
-render_var_add:SECTION_FOOTER_NAV_LINK_1_TITLE=
-render_var_add:SECTION={TPL:main_svg}
-render_var_add:SECTION_SVG=main.svg
-render_var_add:STATIC_IMG_LOGO_TITLE=HAPPENSTANCE - The experience of increased trade
-
-JS_REQUIRE=hidden
-JS_REQUIRE=websocket
-JS_REQUIRE=geo
-
-CSS_REQUIRE=base
-
-IMG_REQUIRE=logo
-SVG_REQUIRE=main
-
 <!doctype html>
 <html lang="{DOC_LANG}">
 	<head>
@@ -212,55 +121,27 @@ SVG_REQUIRE=main
 		 <script type="text/javascript"
 	      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB60l6eLOSvaG7KcCgbCUotsfsgHK-BShQ&sensor=false">
 	    </script>
-		
+
 		{STATIC_JS}
-		
+
 	</head>
 	<body>
 		<header>
 			<div role="banner">
-				{STATIC_IMG_LOGO}
-				<nav>
-				<ul>
-					{TPL:banner_menu}
-				</ul>
-				</nav>
+				{HEADER_LINK_1_IMG}
 			</div>
 			<h1>{HEADER_TITLE_1}</h1>
-			<h2>{HEADER_TITLE_2}</h2>
 		</header>
 		<aside role="complementary">
-			<h3>{ASIDE_TITLE}</h3>
-			<p>{ASIDE_RESUME_1}</p>
-			<p>{ASIDE_RESUME_2}</p>
-			<nav>
-				<ul>
-					<li>
-						<a href="{ASIDE_ELEM_LINK_1_LINK}">{ASIDE_ELEM_LINK_1_TITLE}</a>
-					</li>
-					<li>
-						<a href="{ASIDE_ELEM_LINK_2_LINK}">{ASIDE_ELEM_LINK_2_TITLE}</a>
-					</li>
-					<li>
-						<a href="{ASIDE_ELEM_LINK_3_LINK}">{ASIDE_ELEM_LINK_3_TITLE}</a>
-					</li>
-					<li>
-						<a href="{ASIDE_ELEM_LINK_4_LINK}">{ASIDE_ELEM_LINK_4_TITLE}</a>
-					</li>
-					<li>
-						<a href="{ASIDE_ELEM_LINK_5_LINK}">{ASIDE_ELEM_LINK_5_TITLE}</a>
-					</li>
-				</ul>
-			</nav>
+			{MENU_MAIN}
 		</aside>
 		<article>
-			{STATIC_SVG_MAIN}
-			
+			{SECTION_SVG}
 		</article>
 		<footer>
-			{TPL:contact}
+			{CONTACT}
 			<nav role="navigation">
-				{TPL:site_map}
+				{SITE_MAP}
 			</nav>
 			<div role="contentinfo">
 				{SECURITY_OWNER_NAME} &copy; - 2013 | <span id="licence">Released under <a href="{SECURITY_LICENCE_REF}">{SECURITY_LICENCE_NAME}</a>
