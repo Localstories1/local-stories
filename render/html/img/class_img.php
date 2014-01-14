@@ -5,6 +5,7 @@ class img extends \www\www\render\html {
 
 	CONST ID_BASE 	= 'img_';
 	CONST DIR 		= 'img';
+	CONST VAR_URL 	= '{DESIGN_IMG}';
 
 	public function load($val){
 
@@ -14,14 +15,14 @@ class img extends \www\www\render\html {
 		$title 		= $val[1];
 		$this->file = glob($this->dir.DIRECTORY_SEPARATOR.$file.'*')[0];
 		$class 		= '\\page';
-		$file 		= $class::file_to_url($file);
+		$this->url 	= $class::file_to_url($this->file);
 
 		$this->val 	= '
 <img
 	id="'.self::ID_BASE.'_'.$this->id.'"
 	src="'.$file.'"
 	type="text/img"
-	title="'.$title.'"
+	title="'.$this->url.'"
 />'."\n";
 
 		return true;

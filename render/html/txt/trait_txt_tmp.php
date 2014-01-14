@@ -1,7 +1,7 @@
 <?php
-namespace www\www\render\html\txt;
+namespace www\www\render\html\url;
 
-trait trait_txt_tmp {
+trait trait_url_tmp {
 
 
 }

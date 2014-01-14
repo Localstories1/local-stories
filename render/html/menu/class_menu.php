@@ -11,10 +11,6 @@ class menu extends \www\www\render\html {
 		$this->dir 	= $this->resouce_dir.DIRECTORY_SEPARATOR.self::DIR;
 		$class 		= 'h4';
 
-		echo '<pre>';
-		var_export($this->vars, true);
-		echo '</pre>';
-
 		foreach($this->vars as $var => $tpl){
 
 			$list[$tpl->order] = $tpl;
@@ -23,18 +19,11 @@ class menu extends \www\www\render\html {
 
 		foreach($list as $tpl){
 
-			/*
-			echo '<pre>';
-			echo var_export($tpl, true);
-			echo '</pre>';
-			exit();
-			*/
 			if($this->index === 'true') $class = 'h3';
 
-			$id 	= self::ID_BASE.$tpl->id;
-			$link 	= 'index.php?page='.$this->id;
-
-			$this->val[$tpl->parent][$tpl->order] = '
+			$id 									= self::ID_BASE.$tpl->id;
+			$link 									= 'index.php?page='.$this->id;
+			$this->val[$tpl->parent][$tpl->order] 	= '
 <li class="'.$class.'">
 	<a href="'.$link.'" id="'.$id.'" name="'.$id.'">'.$tpl->val.'</a>
 </li>

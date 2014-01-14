@@ -32,6 +32,7 @@ abstract class render {
 
 	protected $dir;
 	protected $file;
+	protected $url;
 
 	CONST VAR_PREFIX					= '';
 	CONST TPL_EXT_DESC					= '.csv';
@@ -91,20 +92,34 @@ abstract class render {
 			$class::$tpl_page 	= self::$tpl_page;
 			$class::$tpl_lang 	= self::$tpl_lang;
 			$var 				= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL, $v[1]);
-			$tpl 				= new $class($var);
-			$tpl->lang     	 	= $lang;
-			$tpl->type      	= $type;
-			$tpl->var 			= $var;
-			$val 				= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL, $v[4]);
-			$tpl->tags 			= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[5]));
-			$tpl->profils 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[6]));
-			$tpl->compaigns 	= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[7]));
-			$tpl->themes 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[8]));
-			$tpl->locates 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[9]));
-			$tpl->order 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[10]);
-			$tpl->parent 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[11]);
-			$tpl->index 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[12]);
-			$tpl->basename  	= $tpl->var;
+
+			if(isset($tpl_vars[$var]) === false) {
+
+				$tpl = new $class($var);
+
+				$tpl->lang     	 	= $lang;
+				$tpl->type      	= $type;
+				$tpl->var 			= $var;
+				$tpl->tags 			= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[5]));
+				$tpl->profils 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[6]));
+				$tpl->compaigns 	= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[7]));
+				$tpl->themes 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[8]));
+				$tpl->locates 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[9]));
+				$tpl->order 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[10]);
+				$tpl->parent 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[11]);
+				$tpl->index 		= str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[12]);
+				$tpl->basename  	= $tpl->var;
+			}
+			else {
+
+				$tpl 				= $tpl_vars[$tpl->var];
+				$tpl->tags 			= array_merge($tpl->tags, 	explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[5])));
+				$tpl->profils 		= array_merge($tpl->profils, 	explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[6])));
+				$tpl->compaigns 	= array_merge($tpl->compaigns, 	explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[7])));
+				$tpl->themes 		= array_merge($tpl->themes, 	explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[8])));
+				$tpl->locates 		= array_merge($tpl->locates, 	explode(self::TPL_VAR_SEPARATOR_VAL_LIST, str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL_LIST, $v[9])));
+			}
+			$val = str_replace(self::TPL_VAR_SEPARATOR_VAL_RPL, self::TPL_VAR_SEPARATOR_VAL, $v[4]);
 
 			$tpl->load($val);
 
@@ -113,7 +128,8 @@ abstract class render {
 		foreach($tpl_vars as $var => $tpl){
 
 			$tpl->compile();
-			$this->vars[$var] = $tpl;
+
+			$this->vars[$tpl->var] = $tpl;
 		}
 		return true;
 	}

@@ -9,9 +9,11 @@ class css extends \www\www\render\html {
 
 	public function load($val){
 
-		$this->dir 	= $this->resouce_dir.DIRECTORY_SEPARATOR.self::DIR;
-		$this->file = $this->dir.DIRECTORY_SEPARATOR.$val.self::EXT;
-		$this->val 	= '<link rel="stylesheet" href="'.$this->file.'" type="text/css">'."\n";
+		$this->dir 			= $this->resouce_dir.DIRECTORY_SEPARATOR.self::DIR;
+		$this->file 		= $this->dir.DIRECTORY_SEPARATOR.$val.self::EXT;
+		$class 				= '\\page';
+		$this->url 			= $class::file_to_url($this->file);
+		$this->val[$val] 	= '<link rel="stylesheet" href="'.$this->url.'" type="text/css">'."\n";
 
 		return true;
 	}
@@ -19,7 +21,7 @@ class css extends \www\www\render\html {
 
 		if(is_string($this->val) === true) return true;
 
-		$val = implode("\n", $this->val);
+		$this->val = implode("\n", $this->val);
 
 		return true;
 	}

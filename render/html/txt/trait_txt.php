@@ -1,9 +1,9 @@
 <?php
 namespace www\www\render\html;
 
-trait trait_txt {
+trait trait_url {
 
-	use \www\www\render\html\txt\trait_txt_tmp;
+	use \www\www\render\html\url\trait_url_tmp;
 
 }
 ?>

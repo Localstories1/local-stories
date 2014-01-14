@@ -13,7 +13,11 @@ trait trait_html {
 		}
 		$file = str_replace($_SERVER['DOCUMENT_ROOT'], '', $file);
 		$file = str_replace(DIRECTORY_SEPARATOR, '/', $file);
-		$file = 'http://'.$dns.'/'.$file;
+		$file = $dns.'/'.$file;
+
+		while(strstr($file, '//') !== false) $file = str_replace('//', '/', $file);
+
+		$file = 'http://'.$file;
 
 		return $file;
 	}
