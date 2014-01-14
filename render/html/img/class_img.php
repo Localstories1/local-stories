@@ -1,7 +1,7 @@
 <?php
-namespace html;
+namespace www\www\render\html;
 
-class img extends html {
+class img extends \www\www\render\html {
 
 	CONST ID_BASE 	= 'img_';
 	CONST DIR 		= 'img';
@@ -9,16 +9,20 @@ class img extends html {
 	private $dir;
 	private $file;
 
-	public function txt_load($val){
+	public function load($val){
 
-		$this->dir 	= $this->tpl_dir.DIRECTORY_SEPARATOR.self::DIR;
-		$val 		= explode(self::$TPL_VAR_SEPARATOR_VAL_LIST, $val);
+		$this->dir 	= self::$tpl_dir.DIRECTORY_SEPARATOR.self::DIR;
+		$val 		= explode(self::TPL_VAR_SEPARATOR_VAL_LIST, $val);
 		$file 		= $val[0];
 		$title 		= $val[1];
+
+		echo $this->dir.DIRECTORY_SEPARATOR.$file;
+		print_r(glob($this->dir.DIRECTORY_SEPARATOR.$file.'*'));
+
 		$this->file = glob($this->dir.DIRECTORY_SEPARATOR.$file.'*')[0];
 		$this->val 	= '
 <img
-	id="'.self::$img_id_base.'_'.$this->id.'"
+	id="'.self::ID_BASE.'_'.$this->id.'"
 	src="'.$val.'"
 	type="text/img"
 	title="'.$title.'"

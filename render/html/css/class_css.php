@@ -1,7 +1,7 @@
 <?php
-namespace html;
+namespace www\www\render\html;
 
-class css extends html {
+class css extends \www\www\render\html {
 
 	CONST ID_BASE 	= 'css_';
 	CONST DIR 		= 'css';

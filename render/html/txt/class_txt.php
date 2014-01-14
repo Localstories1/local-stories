@@ -1,7 +1,7 @@
 <?php
-namespace html;
+namespace www\www\render\html;
 
-class txt extends \render\render {
+class txt extends \www\www\render\html {
 
 	public function load($val){
 

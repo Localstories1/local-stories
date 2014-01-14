@@ -1,7 +1,7 @@
 <?php
-namespace html;
+namespace www\www\render\html;
 
-class svg extends html {
+class svg extends \www\www\render\html {
 
 	CONST ID_BASE 	= 'svg_';
 	CONST DIR 		= 'svg';
@@ -10,7 +10,7 @@ class svg extends html {
 	private $dir;
 	private $file;
 
-	public function txt_load($val){
+	public function load($val){
 
 		$this->dir 	= $this->tpl_dir.DIRECTORY_SEPARATOR.self::DIR;
 		$this->file = $this->dir.DIRECTORY_SEPARATOR.$val.self::EXT;

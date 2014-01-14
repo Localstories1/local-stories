@@ -66,12 +66,10 @@ trait trait_CONST_dir_trait{
 
     $base 			= basename($dir);
     $file 			= $dir.DIRECTORY_SEPARATOR.self::$TRAIT_PREFIX.$base.self::$TRAIT_EXT;
-    $file_tmp 		= $dir.DIRECTORY_SEPARATOR.self::$TRAIT_PREFIX.self::$TRAIT_TMP_SUFFIX.$base.self::$TRAIT_EXT;
+    $file_tmp 		= $dir.DIRECTORY_SEPARATOR.self::$TRAIT_PREFIX.$base.self::$TRAIT_TMP_SUFFIX.self::$TRAIT_EXT;
    	$modules_dir 	= glob($dir.DIRECTORY_SEPARATOR.'*');
 
     if(is_file($file) === true) {
-
-    	echo $file.'<br />';
 
     	foreach($modules_dir as $module_dir){
 
@@ -82,15 +80,15 @@ trait trait_CONST_dir_trait{
     	}
     	return true;
     }
-    if($parent === false) $parent = $base;
+    if($parent === false) {
 
-    $use = '';
-
-    if(is_file($file_tmp) === true){
-
-    	$use = "\t".'use '.self::$TRAIT_PREFIX.$base.self::$TRAIT_TMP_SUFFIX.';'."\n";
+    	$parent 	= $base;
+    	$use_path 	= $base;
     }
-    $content = '<?php
+    else $use_path 	= $parent.'\\'.$base;
+
+    $use 		= "\t".'use \\'.$use_path.'\\'.self::$TRAIT_PREFIX.$base.self::$TRAIT_TMP_SUFFIX.';'."\n";
+    $content 	= '<?php
 namespace '.$parent.';
 
 trait '.self::$TRAIT_PREFIX.$base.' {
@@ -99,9 +97,8 @@ trait '.self::$TRAIT_PREFIX.$base.' {
 }
 ?>
 ';
-    echo $file.'<br/>';
-    echo highlight_string($content, true).'<br/>';
     file_put_contents($file, $content);
+   	chmod($file, '0777');
 
     foreach($modules_dir as $module_dir){
 
@@ -120,8 +117,6 @@ trait '.self::$TRAIT_PREFIX.$base.' {
     $uses_php 		= '';
 
     if(is_file($file) === true) {
-
-    	echo $file.'<br />';
 
     	foreach($modules_dir as $module_dir){
 
@@ -148,9 +143,8 @@ trait '.self::$TRAIT_PREFIX.$base.self::$TRAIT_TMP_SUFFIX.' {
 '.$uses_php.'
 }
 ?>';
-    echo $file.'<br/>';
-    echo highlight_string($content, true).'<br/>';
     file_put_contents($file, $content);
+    chmod($file, '0777');
 
     foreach($modules_dir as $module_dir){
 
@@ -170,8 +164,6 @@ trait trait_CONST_dir_class{
   public static function class_build_load_all($dir, $parent = false){
 
     self::class_build($dir, $parent);
-
-    echo 'LOAD';
 
     $base 			= basename($dir);
     $file 			= $dir.DIRECTORY_SEPARATOR.self::$CLASS_PREFIX.$base.self::$CLASS_EXT;
@@ -196,8 +188,6 @@ trait trait_CONST_dir_class{
 
     if(is_file($file) === true) {
 
-    	echo $file.'<br />';
-
     	foreach($modules_dir as $module_dir){
 
     		if(is_dir($module_dir) === false) continue;
@@ -219,17 +209,20 @@ class '.$base.' ';
       $class = '<?php
 namespace '.$parent.';
 
-class '.$base.' extends '.$parent.' ';
+class '.$base.' extends \\'.$parent.' ';
     }
+    if($parent === false) $parent = $base;
+
     $content = $class.' {
 
-  use '.$parent.'\\'.self::$TRAIT_PREFIX.$base.';
+  // use \\'.$parent.'\\'.self::$TRAIT_PREFIX.$base.';
 }
 ?>';
-    echo $file.'<br/>';
-    echo '0: '.highlight_string($content, true).'<br/>';
-    $res 			= file_put_contents($file, $content);
-    $modules_dir 	= glob($dir.DIRECTORY_SEPARATOR.'*');
+    $res = file_put_contents($file, $content);
+
+   	chmod($file, '0777');
+
+    $modules_dir = glob($dir.DIRECTORY_SEPARATOR.'*');
 
     foreach($modules_dir as $module_dir){
 

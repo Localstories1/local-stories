@@ -3,24 +3,17 @@ namespace www\www\render\html;
 
 trait trait_tpl{
 
-	private static $TPL_DIR;
-	private static $TPL_EXT 			= '.html';
+	protected static $TPL_DIR;
+	protected static $TPL_EXT 			= '.html';
 
 	private $tpl_vars 					= array();
 	private $tpl_content;
 	private $params;
 
 	public $val 						= array();
-
-	private $tpl_env 					= 'dev';
-	private $tpl_render 				= 'html';
-	private $tpl_theme 					= 'theme_default';
-	private $tpl_tpl 					= 'base';
-	private $tpl_page 					= 'index';
-	private $tpl_lang 					= 'US';
 	private $tpl_out 					= '';
 
-	private $tpl_base_dir;
+	protected $tpl_base_dir;
 
 	public function __construct($params){
 
@@ -39,7 +32,7 @@ trait trait_tpl{
 
 		if($val !== false) $this->tpl = $val;
 
-		tpl::$tpl_dir 	= $this->tpl_base_dir;
+		tpl::$tpl_dir 	= '..'.DIRECTORY_SEPARATOR.$this->tpl_base_dir;
 		$var 			= new tpl($this->tpl);
 		$val 			= $this->tpl_base_dir.DIRECTORY_SEPARATOR.$this->tpl.self::$TPL_EXT;
 

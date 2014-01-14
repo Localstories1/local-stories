@@ -1,7 +1,7 @@
 <?php
-namespace html;
+namespace www\www\render\html;
 
-class menu extends html {
+class menu extends \www\www\render\html {
 
 	CONST ID_BASE 	= 'menu_';
 	CONST DIR 		= 'menu';

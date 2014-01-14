@@ -1,7 +1,7 @@
 <?php
-namespace html;
+namespace www\www\render\html;
 
-class tpl extends html {
+class tpl extends \www\www\render\html {
 
 	public function load($val){
 
@@ -13,7 +13,7 @@ class tpl extends html {
 
 		if(is_array($this->val) === true) $this->val = implode("\n", $this->val);
 
-		preg_match_all(self::$TPL_VAR_SUB, $this->val, $m);
+		preg_match_all(self::TPL_VAR_SUB, $this->val, $m);
 
 		$m = array_unique($m[1]);
 
