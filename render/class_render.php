@@ -4,12 +4,12 @@ namespace www\www;
 class render {
 
 	public static $tpl_dir;
-	public static $tpl_env 				= 'dev';
-	public static $tpl_render 			= 'html';
-	public static $tpl_theme 			= 'default';
-	public static $tpl_tpl 				= 'base';
-	public static $tpl_page 			= 'index';
-	public static $tpl_lang 			= 'US';
+	public static $tpl_env;
+	public static $tpl_render;
+	public static $tpl_theme;
+	public static $tpl_tpl;
+	public static $tpl_page;
+	public static $tpl_lang;
 
 	public $id;
 	public $basename 					= '';
@@ -28,6 +28,7 @@ class render {
 	public $index 						= false;
 	public $desc_file					= false;
 	public $vars 						= array();
+	public $resouce_dir;
 
 	CONST VAR_PREFIX					= '';
 	CONST TPL_EXT_DESC					= '.csv';
@@ -41,9 +42,11 @@ class render {
 
 		if($v === false) $v = '{'.strtoupper($basename).'}';
 
-		$this->basename = $basename;
-		$this->id   	= \page::data_suppr_dirty($this->basename);
-		$this->tag 		= $v;
+		$this->basename 	= $basename;
+		$this->id   		= \page::data_suppr_dirty($this->basename);
+		$this->tag 			= $v;
+		$tmp 				= explode(DIRECTORY_SEPARATOR, self::$tpl_dir);
+		$this->resouce_dir 	= str_replace(DIRECTORY_SEPARATOR.end($tmp), '', self::$tpl_dir);
 
 		$this->load_desc();
 	}
@@ -52,6 +55,8 @@ class render {
 		$desc = self::$tpl_dir.DIRECTORY_SEPARATOR.$this->basename.self::TPL_EXT_DESC;
 
 		if(is_file($desc) === false) return true;
+
+		echo __CLASS__.' '.__LINE__.' '.highlight_string($desc, true).'<br/>';
 
 		$this->desc_file 	= $desc;
 		$tpl_vars 			= file_get_contents($desc);
@@ -106,6 +111,10 @@ class render {
 
 			$this->vars[$var] = $tpl->compile();
 		}
+		echo '<pre>';
+		print_r($this->vars);
+		echo '</pre>';
+
 		return true;
 	}
 }

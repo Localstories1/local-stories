@@ -10,7 +10,7 @@ class menu extends \www\www\render\html {
 
 	public function menu_load($val){
 
-		$this->dir 	= $this->tpl_dir.DIRECTORY_SEPARATOR.self::DIR;
+		$this->dir 	= $this->resouce_dir.DIRECTORY_SEPARATOR.self::DIR;
 		$class 		= 'h4';
 
 		foreach($this->vars as $var => $tpl){

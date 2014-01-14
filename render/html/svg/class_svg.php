@@ -12,7 +12,7 @@ class svg extends \www\www\render\html {
 
 	public function load($val){
 
-		$this->dir 	= $this->tpl_dir.DIRECTORY_SEPARATOR.self::DIR;
+		$this->dir 	= $this->resouce_dir.DIRECTORY_SEPARATOR.self::DIR;
 		$this->file = $this->dir.DIRECTORY_SEPARATOR.$val.self::EXT;
 		$this->val 	= file_get_contents($this->file)."\n";
 

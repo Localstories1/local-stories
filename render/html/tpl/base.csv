@@ -1,8 +1,4 @@
-VAR:;HEADER_NAV_0_LINKS;US;TXT;;|;|;|;|;|;0;0;false
-VAR:;HEADER_NAV_1_LINKS;US;TXT;;|;|;|;|;|;0;0;false
 VAR:;DOC_TITLE_1;US;TXT;HAPPENSTANCE - The experience of increased trade;|;|;|;|;|;0;0;false
-VAR:;HEADER_NAV0_LINK_1_TITLE;US;TXT;HAPPENSTANCE - The experience of increased trade;|;|;|;|;|;0;0;false
-VAR:;HEADER_NAV0_LINK_1_LINK;US;TXT;index.php;|;|;|;|;|;0;0;false
 VAR:;HEADER_TITLE_2;US;TXT;;|;|;|;|;|;0;0;false
 VAR:;HEADER_CONTENT_1;US;TXT;;|;|;|;|;|;0;0;false
 VAR:;HEADER_CONTENT_2;US;TXT;;|;|;|;|;|;0;0;false
@@ -15,7 +11,6 @@ VAR:;ASIDE_RESUME_1;US;TXT;Signalement 1;|;|;|;|;|;0;0;false
 VAR:;ASIDE_RESUME_2;US;TXT;Signalement 2;|;|;|;|;|;0;0;false
 VAR:;SECTION_HEADER_TILE_1;US;TXT;;|;|;|;|;|;0;0;false
 VAR:;SECURITY_OWNER_NAME;US;TXT;Local Stories SASU � Happentance Brand;|;|;|;|;|;0;0;false
-VAR:;FOOTER_NAV_HEADER;US;TXT;;|;|;|;|;|;0;0;false
 VAR:;SECTION_HEADER_TITLE_1;US;TXT;;|;|;|;|;|;0;0;false
 VAR:;HEADER_SCRIPTS;US;TXT;;|;|;|;|;|;0;0;false
 VAR:;SECTION_HEADER_TITLE_2;US;TXT;;|;|;|;|;|;0;0;false
@@ -59,8 +54,6 @@ VAR:;DOC_LOGO_94.png;US;TXT;;|;|;|;|;|;0;0;false
 VAR:;DOC_LOGO_57.png;US;TXT;;|;|;|;|;|;0;0;false
 VAR:;DOC_LOGO_48.png;US;TXT;;|;|;|;|;|;0;0;false
 VAR:;DOC_LOGO_16.png;US;TXT;;|;|;|;|;|;0;0;false
-VAR:;SECTION_FOOTER_NAV_LINK_1_LINK;US;TXT;;|;|;|;|;|;0;0;false
-VAR:;SECTION_FOOTER_NAV_LINK_1_TITLE;US;TXT;;|;|;|;|;|;0;0;false
 VAR:;HEADER_LINK_1_IMG;US;IMG;logo|HAPPENSTANCE - The experience of increased trade;|;|;|;|;|;0;0;false
 VAR:;SECTION_SVG;US;SVG;main;|;|;|;|;|;0;0;false
 VAR:;CONTACT;US;TPL;contact;|;|;|;|;|;0;0;false

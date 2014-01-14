@@ -7,7 +7,7 @@ class tpl extends \www\www\render\html {
 
 		$this->val = file_get_contents($val);
 
-		return true;
+		return $this->val;
 	}
 	public function compile(){
 
@@ -26,7 +26,7 @@ class tpl extends \www\www\render\html {
 				$this->val = str_replace($v, $var->val, $this->val);
 			}
 		}
-		return true;
+		return $this->val;
 	}
 }
 
