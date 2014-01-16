@@ -1,8 +1,8 @@
-VAR:;DOC_TITLE_1;US;TXT;HAPPENSTANCE - The experience of increased trade;|;|;|;default|;|;0;0;false
+VAR:;DOC_TITLE_1;US;TXT;Happenstance and serendipity applied to information;|;|;|;default|;|;0;0;false
 VAR:;HEADER_TITLE_2;US;TXT;;|;|;|;default|;|;0;0;false
 VAR:;HEADER_CONTENT_1;US;TXT;;|;|;|;default|;|;0;0;false
 VAR:;HEADER_CONTENT_2;US;TXT;;|;|;|;default|;|;0;0;false
-VAR:;HEADER_TITLE_1;US;TXT;HAPPENSTANCE - The experience of increased trade;|;|;|;default|;|;0;0;false
+VAR:;HEADER_TITLE_1;US;TXT;Happenstance and serendipity applied to information;|;|;|;default|;|;0;0;false
 VAR:;DOC_CHARSET;US;TXT;utf-8;|;|;|;default|;|;0;0;false
 VAR:;HEADER_NAV_HEADER;US;TXT;;|;|;|;default|;|;0;0;false
 VAR:;DOC_LANG;US;TXT;FR;|;|;|;default|;|;0;0;false
@@ -54,7 +54,7 @@ VAR:;DOC_LOGO_94;US;URL;IMG|logo_94x94;|;|;|;default|;all|;0;0;false
 VAR:;DOC_LOGO_57;US;URL;IMG|iphone;|;|;|;default|;all|;0;0;false
 VAR:;DOC_LOGO_48;US;URL;IMG|windows;|;|;|;default|;all|;0;0;false
 VAR:;DOC_LOGO_16;US;URL;IMG|favicon;|;|;|;default|;all|;0;0;false
-VAR:;HEADER_LINK_1_IMG;US;IMG;logo|HAPPENSTANCE - The experience of increased trade;|;|;|;default|;all|;0;0;false
+VAR:;HEADER_LINK_1_IMG;US;IMG;logo|Happenstance and serendipity applied to information;|;|;|;default|;all|;0;0;false
 VAR:;SECTION_SVG;US;SVG;main;|;|;|;default|;all|;0;0;false
 VAR:;CONTACT;US;TPL;contact;|;|;|;default|;all|;0;0;false
 VAR:;SITE_MAP;US;TPL;site_map;|;|;|;default|;all|;0;0;false
@@ -65,3 +65,5 @@ VAR:;STATIC_JS;US;JS;hidden;|;|;|;default|;all|;0;0;false
 VAR:;STATIC_JS;US;JS;websocket;|;|;|;default|;all|;0;0;false
 VAR:;STATIC_JS;US;JS;geo;|;|;|;default|;all|;0;0;false
 VAR:;DOC_LOGO_128;US;URL;IMG|mac;|;|;|;default|;all|;0;0;false
+VAR:;MAIN_BOTTOM_SVG;US;SVG;main_bottom;|;|;|;default|;all|;0;0;false
+VAR:;LIVE;US;TPL;live;|;|;|;default|;all|;0;0;false

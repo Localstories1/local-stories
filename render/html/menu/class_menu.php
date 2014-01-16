@@ -19,6 +19,8 @@ class menu extends \www\www\render\html {
 
 		foreach($list as $tpl){
 
+			$class = 'h4';
+
 			if($this->index === 'true') $class = 'h3';
 
 			$id 									= self::ID_BASE.$tpl->id;

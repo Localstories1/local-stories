@@ -1,0 +1,89 @@
+<html>
+<head>
+	<script>
+
+
+	</script>
+	<style>
+
+	</style>
+<head>
+<body>
+<from id="request_a_service" method="post" action="">
+	<fieldset>
+		<legend>Request a Service</legend> 
+		<label for="i_am_a">I am  a</label>  <input name="i_am_a" id="i_am_a" type="text" list="liste_i_am_a">
+		<datalist id="liste_i_am_a">
+			<option value="Restaurant">Restaurant</option>
+			<option value="Accountant">Accountant</option>
+			<option value="Real_Estate">Real Estate</option>
+			<option value="Retailer">Retailer</option>
+		</datalist>
+		<br />
+		<label for="i_need_to">I need to</label> <input name=""i_need_to" id=""i_need_to" type="text" list="liste_i_need_to">
+		<datalist id="liste_i_need_to">
+			<option value="Get_customers">Get customers</option>
+			<option value="Keep_customers">Keep customers</option>
+			<option value="Get_noticed">Get noticed</option>
+			<option value="Manage_finance">Manage finance</option>
+			<option value="Collaborate_better">Collaborate better</option>
+			<option value="Backup_Data">Backup Data</option>
+			<option value="Work_from_everywhere">Work from everywhere</option>
+			<option value="Manage_HR">Manage HR</option>
+			<option value="Reduce_IT_costs">Reduce IT costs</option>
+		</datalist>
+		<br />
+		<label for="i_need_to">I need Service provider to</label> <input name="i_need_to" id="i_need_to" type="text" list="liste_i_need_to">
+		<datalist id="liste_i_need_to">
+			<option value="Webiste_development">Webiste development</option>
+			<option value="Ecommerce_Design">Ecommerce Design</option>
+			<option value="Mobile_Apps_development">Mobile Apps development</option>
+			<option value="SEO">SEO</option>
+			<option value="Social_Media_Integration">Social Media Integration</option>
+			<option value="Setup_system">Setup system</option>
+		</datalist>
+		<br />
+		<label for="like_a_service_provider">I would like a service provider</label> <input name="like_a_service_provider" id="like_a_service_provider" type="text" list="liste_like_a_service_provider">
+		<datalist id="liste_like_a_service_provider">
+			<option value="Webiste_development">Webiste development</option>
+			<option value="Ecommerce_Design">Ecommerce Design</option>
+			<option value="Mobile_Apps_development">Mobile Apps development</option>
+		</datalist> <label for="with">with</label>  <input name="with" id="with" type="text" list="liste_with">
+		<datalist id="liste_with">
+			<option value="Shopify">Shopify</option>
+			<option value="Other">Other</option>
+		</datalist>		
+		<br />
+		<label for="will_have">I will have</label> 1 <input  id="will_have" name="will_have" type="range" value="1" max="1000" min="100" step="1"> 1000 <select id="will_have_nature" name="will_have_nature">
+			<option value="Personnes">Personnes</option>
+			<option value="Products">Products</option>
+			<option value="Requests_day">Requests/day</option>
+			<option value="Account">Account</option>
+			<option value="Other">Other</option>
+		</select>
+		<br />
+		<textarea name="description_of_the_type_of_products" id="description_of_the_type_of_products" placeholder="Here a description of the type of products" ></textarea>
+		<br />
+		<label for="need_additional_service">I will also need additional service</label> <input type="text" value="" id="need_additional_service" name="need_additional_service" /> 
+		<br />
+		<label for="for">For</label> One Project<input  id="for" name="for" type="range" value="1" max="1" min="100" step="1"> All Projects
+		<br />
+		</label for="need_this">I need this</label> Now <input id="need_this" name="need_this" type="range" value="30" max="360" min="15" step="15"> 1 year
+	</fieldset>
+	<fieldset>
+		<legend>These Service Providers  can assist you with you request</legend>
+		<div id="suppliers"></div>
+	</fieldset>
+	<fieldset>
+		<legend>Please review your service request above and click on "Send Me a Quote" button  if you happy with the request. You will receive quotes from service provider in the next 24 hours</legend>
+		<input id="first_name" name="first_name" type="text" value="" placeholder="First name" /><br />
+		<input id="last_name" name="last_name" type="text" value="" placeholder="Last name" /><br />
+		<input id="email" name="email" type="email" value="" placeholder="Email address" /><br />
+		<input id="compagny_business" name="compagny_business" type="text" value="" placeholder="Compagny Business" /><br />
+		<input id="industry_architecture" name="industry_architecture" type="text" value="" placeholder="Industry Architecture" /><br />
+		<input id="send_quote" name="send_quote" type="submit" value="Send me a Quote" />
+	</fieldset>
+</from>
+<div class="console"></div>
+<body>
+</html>

@@ -20,7 +20,7 @@ class img extends \www\www\render\html {
 		$this->val 	= '
 <img
 	id="'.self::ID_BASE.'_'.$this->id.'"
-	src="'.$file.'"
+	src="'.$this->url.'"
 	type="text/img"
 	title="'.$this->url.'"
 />'."\n";

@@ -1,1 +1,30 @@
 @CHARSET "UTF-8";
+
+nav ul li{
+
+	background-position: right top;
+	background-image: url(http://local-stories.com/render/html/img/fond_h4.png);
+	background-repeat: no-repeat;
+	text-align: right;
+	padding-right: 60px;
+}
+nav ul li a{
+
+	display:block;
+	min-height: 60px;
+	vertical-align: middle;
+	line-height: 1em;
+	text-align: right;
+}
+nav ul li a:hover{
+
+	color: #293EE0;
+}
+nav ul li.h4{
+
+	background-image: url(http://local-stories.com/render/html/img/fond_h4.png);
+}
+nav ul li.h3{
+
+	background-image: url(http://local-stories.com/render/html/img/fond_h3.png);
+}

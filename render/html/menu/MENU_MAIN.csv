@@ -1,4 +1,4 @@
-VAR:;Gamification - Experience First;US;TXT;Gamification - Experience First;|;|;|;default|;all|;1;1;true
+VAR:;Gamification - Experience First;US;TXT;Gamification <br /> Experience First;|;|;|;default|;all|;1;1;true
 VAR:;Customer segments;US;TXT;Customer segments;|;|;|;default|;all|;2;1;false
 VAR:;Value Proposition;US;TXT;Value Proposition;|;|;|;default|;all|;3;1;false
 VAR:;Market Places;US;TXT;Market Places;|;|;|;default|;all|;4;1;false
@@ -6,10 +6,10 @@ VAR:;StoryTelling - Be natural;US;TXT;StoryTelling - Be natural;|;|;|;default|;a
 VAR:;You;US;TXT;You;|;|;|;default|;all|;6;2;false
 VAR:;Responsibility environmental and societal;US;TXT;Responsibility environmental and societal;|;|;|;default|;all|;7;2;false
 VAR:;Customers and access to value;US;TXT;Customers and access to value;|;|;|;default|;all|;8;2;false
-VAR:;Workflows self-managed - Clever Production tools;US;TXT;Workflows self-managed - Clever Production tools;|;|;|;default|;all|;9;3;true
+VAR:;Workflows self-managed - Clever Production tools;US;TXT;Workflows self-managed <br /> Clever Production tools;|;|;|;default|;all|;9;3;true
 VAR:;Key Partners Internals as Externals;US;TXT;Key Partners Internals as Externals;|;|;|;default|;all|;10;3;false
 VAR:;Federated dashboard (Big Index);US;TXT;Federated dashboard (Big Index);|;|;|;default|;all|;11;3;false
-VAR:;Connected resources - Learning Share and scoring;US;TXT;Connected resources - Learning Share and scoring;|;|;|;default|;all|;12;4;true
+VAR:;Connected resources - Learning Share and scoring;US;TXT;Connected resources <br /> Learning Share and scoring;|;|;|;default|;all|;12;4;true
 VAR:;Hub and rules;US;TXT;Hub and rules;|;|;|;default|;all|;13;4;false
 VAR:;Key Connected resources;US;TXT;Key Connected resources;|;|;|;default|;all|;14;4;false
 VAR:;Cloud Resources;US;TXT;Cloud Resources;|;|;|;default|;all|;15;4;false

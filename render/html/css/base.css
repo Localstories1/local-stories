@@ -35,35 +35,19 @@ body {
 	padding:0 0 2em 0;
 	margin:0;
 }
+article, footer, header, aside, nav {
+
+	position:relative;
+}
 body, input, textarea {
 
     line-height: 1.5;
 }
 header {
 
-	padding: 0;
+	padding: 0px;
 	width:100%;
-	height:auto;
-	margin: 0 auto 0 auto;
-	clear:both;
-}
-body section, body aside{
-
-	margin-top: 240px !important;
-}
-body aside{
-
-	float:left;
-	width:20%;
-	height:auto;
-	margin: 0 0 0 0;
-	background:#fff;
-}
-body section#main {
-
-	width:25%;
-	margin: 0 0 0px 0;
-	float:right;
+	margin: 0px;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans',Arial,sans-serif;
@@ -85,6 +69,32 @@ h1 {
 	margin:0;
     margin-bottom: 20px;
 }
+ul, li {
+
+    margin: 0;
+    padding: 0;
+	list-style-type:none;
+}
+body aside{
+
+	width:18%;
+	margin: 0px;
+	padding:0.5em;
+	background:#fff;
+	float:left;
+	display: block;
+	height:auto;
+}
+body article {
+
+	width: 70%;
+	margin: 0px;
+	padding:0.5em;
+	background:#fff;
+	float: right;
+	display: block;
+	height: auto;
+}
 h2 {
 	font-size: 2em;
 	font-weight:bold;
@@ -97,15 +107,6 @@ h3 {
 	font-weight:bold;
 	margin: 1.5em 0 .8em 0;
 	color: #444;
-}
-ul, li {
-    margin: 0;
-    padding: 0;
-}
-li {
-	background: url(/css/img/ico-puce.png) no-repeat scroll left 7px transparent;
-	list-style-type:none;
-	padding-left: 10px;
 }
 input[type="number"] {
 		line-height:1.5;
@@ -149,28 +150,6 @@ a {
 footer{
 
 	clear:both;
-}
-article {
-
-	margin:1em;
-	padding:1em;
-	background:#fff;
-}
-aside {
-
-	display: none;
-	visibility: hidden;
-}
-article {
-
-	background:#fff;
-	margin:1em 3em;
-	padding:0.5em;
-	display: block;
-}
-article, footer, header, aside, nav {
-
-	position:relative;
 }
 footer {
 
@@ -220,12 +199,6 @@ nav[role="navigation"] {
 	padding: 10px;
 	padding-top: 0px;
 	padding-bottom: 0px;
-}
-svg#svg2{
-
-	width: 100%;
-	height: auto;
-	z-index: 1;
 }
 #map_canvas {
 
@@ -307,7 +280,6 @@ svg#svg2{
 	height: auto;
 	margin: 0px;
 }
-
 @media (max-width: 800px) {
 	Size: Landscape;
 	h1 {font-size:2.5em;}
@@ -347,172 +319,6 @@ svg#svg2{
 
 	}
 }
-.Groupe_ressources
-{
-  background-image : url(Groupe_ressources.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 27px;
-  top : 535px;
-  width : 101px;
-  height : 28px;
-}
-.Groupe_value_proposition
-{
-  background-image : url(Groupe_value_proposition.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 36px;
-  top : 129px;
-  width : 92px;
-  height : 28px;
-}
-.Groupe_access_value
-{
-  background-image : url(Groupe_access_value.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 33px;
-  top : 287px;
-  width : 95px;
-  height : 28px;
-}
-.Groupe_customers
-{
-  background-image : url(Groupe_customers.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 14px;
-  top : 64px;
-  width : 115px;
-  height : 28px;
-}
-.Groupe_dashboard
-{
-  background-image : url(Groupe_dashboard.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 3px;
-  top : 411px;
-  width : 126px;
-  height : 28px;
-}
-.Groupe_storytelling
-{
-  background-image : url(Groupe_storytelling.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 21px;
-  top : 162px;
-  width : 179px;
-  height : 55px;
-}
-.Groupe_connected
-{
-  background-image : url(Groupe_connected.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 24px;
-  top : 444px;
-  width : 225px;
-  height : 55px;
-}
-.Groupe_resources
-{
-  background-image : url(Groupe_resources.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 24px;
-  top : 568px;
-  width : 104px;
-  height : 28px;
-}
-.Groupe_value
-{
-  background-image : url(Groupe_value.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 21px;
-  top : 97px;
-  width : 107px;
-  height : 28px;
-}
-.Groupe_rules
-{
-  background-image : url(Groupe_rules.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 37px;
-  top : 503px;
-  width : 92px;
-  height : 28px;
-}
-.Groupe_rse
-{
-  background-image : url(Groupe_rse.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 31px;
-  top : 251px;
-  width : 98px;
-  height : 34px;
-}
-.Groupe_partners
-{
-  background-image : url(Groupe_partners.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 9px;
-  top : 378px;
-  width : 119px;
-  height : 28px;
-}
-.Groupe_you
-{
-  background-image : url(Groupe_you.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 79px;
-  top : 221px;
-  width : 50px;
-  height : 28px;
-}
-.Groupe_worlfows
-{
-  background-image : url(Groupe_worlfows.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 13px;
-  top : 319px;
-  width : 257px;
-  height : 55px;
-}
-.Groupe_gamification
-{
-  background-image : url(Groupe_gamification.png);
-  /*Pour créer une image référencée dans la CSS, utilisez la commande \'Exporter la CSS sélectionnée\'.*/
-  background-repeat : no-repeat;
-  position : absolute ;
-  left : 18px;
-  top : 5px;
-  width : 209px;
-  height : 55px;
-}
-
 @media (max-width: 640px) {
 	Size: Landscape;
 	h1 {font-size:2.5em;}
