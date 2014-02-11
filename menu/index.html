@@ -1,0 +1,991 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Document sans nom</title>
+<style type="text/css">
+
+@font-face {
+
+  font-family: 'IcomoonSocial';
+  src: url('fonts/IcomoonSocial.eot');
+  src: url('fonts/IcomoonSocial.eot?#iefix') format('embedded-opentype'), url('fonts/IcomoonSocial.woff') format('woff'), url('fonts/IcomoonSocial.ttf') format('truetype'), url('fonts/IcomoonSocial.svg#IcomoonSocial') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+html, body, form, fieldset, legend, header, ul, li, h1, h2, h3, article, aside {
+
+	font-size:100%;
+	margin: 0px;
+	padding: 0px;	
+	border: none;
+	background-color:transparent;
+}
+header {
+	
+	display:block;
+}
+nav ul {
+	
+	padding-left:4px;
+	padding-right:4px;
+}
+nav ul li {
+	
+	width:98%;
+	display:block;
+	color:#3E9DF5;
+	padding: 4px;	
+	alignment-baseline:central;
+	vertical-align:central;
+	padding-left:10px;
+	padding-right:4px;
+	font-size:1em;	
+}
+nav ul li a{
+
+	color:#3E9DF5;
+}
+h1, h2, h3{
+	
+	text-align:center;
+	text-wrap:normal;
+}
+h1 {
+	
+ 	font-size:10vmax;
+ 	font-weight:500;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	text-shadow: 3px 3px 3px #CCCCCC;
+}
+h1 a{
+
+	text-decoration:none;
+}
+h2 {
+
+ 	font-size:6vmax;
+ 	font-weight:250;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-shadow: 2px 2px 2px #CCCCCC;
+}
+h3 {
+
+	font-size:4vmax;
+ 	font-weight:150;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	text-shadow: 1px 1px 1px #CCCCCC;
+	width:100%;	
+}
+form, fieldset{
+
+	width:100%;		
+}
+option, datalist{
+		
+	text-wrap:normal;
+}
+fieldset p, nav p, output {
+
+	color:#D6B2B3;	
+	text-align:center;
+}
+article {
+	
+	clear:both;
+	float:left;
+	width:89%;
+}
+h3+ul{
+	
+	position:absolute;
+	top:-10000px;
+}
+nav[role="main"]{
+	
+	float:left;
+	width:99%;
+	overflow:hidden;
+	position:relative;
+}
+nav[role="main"] input[type="range"]{
+
+	height: 0.6em;
+	font-size:1em;
+	width:25%;
+}
+nav[role="banner"], nav[role="contentinfo"],  nav[role="navigation"]{
+	
+	display:block;
+	width:100%;
+}
+nav[role="banner"]{
+
+	margin-bottom:12%;
+}
+nav[role="contentinfo"],  nav[role="navigation"]{
+	
+	margin-left:18%;
+}
+nav[role="contentinfo"] h3,  nav[role="navigation"] h3{
+	
+	cursor:pointer;
+	color:#D6B2B3;
+}
+nav[role="contentinfo"] h3, nav[role="navigation"] h3{
+
+	border-bottom: 2px dotted #CCCCCC;
+}
+h3[id="item[0]"], ul[id="item_list[0]"], h3[id="item[2]"], ul[id="item_list[2]"], h3[id="item[1]"], ul[id="item_list[1]"], h3[id="item[3]"], ul[id="item_list[3]"]{
+
+transform: scale(0.8) scaleZ(1.0) rotateX(-16deg) rotateY(33deg); transform-origin: 0% 0%; perspective: 200;-webkit-transform: scale(0.8) scaleZ(1.0) rotateX(-16deg) rotateY(33deg); -webkit-transform-origin: 0% 0%; -webkit-perspective: 200; -webkit-perspective-origin: 50% 50%; -moz-transform: scale(0.8) scaleZ(1.0) rotateX(-16deg) rotateY(33deg); -moz-transform-origin: 0% 0%; -moz-perspective: 200; -moz-perspective-origin: 50% 50%; -o-transform: scale(0.8) scaleZ(1.0) rotateX(-16deg) rotateY(33deg); -o-transform-origin: 0% 0%; -o-perspective: 200;
+}
+nav[role="toolbar"]{
+	
+	float:right;
+	width:15%;
+	text-align:center;
+}
+nav[role="toolbar"] input, nav[role="toolbar"] input[type="submit"], nav[role="toolbar"] datalist{
+
+	width:89%;
+	padding: 1px;
+	margin: 1px;
+}
+nav[role="toolbar"] input[type="text"], nav[role="toolbar"] input[type="email"], nav[role="toolbar"] select{
+	
+	width:84%;
+}
+.star{
+
+	background-color:transparent;
+	border-style:solid;
+	border-width:0px;
+	border:none;	
+	background-image:url(img/staroff.gif);
+	height:13px;
+	width:14px;
+	max-height:13px;
+	max-width:14px;
+	min-height:13px;
+	min-width:14px;
+	cursor:pointer;
+}
+#logo{
+
+	width:8%;
+	height:auto;
+	min-width:48px;	
+}
+[class*="nbs-social"] {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 2px;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+  color: #fff;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  text-decoration:none;
+}
+[class*="nbs-social"]:hover {
+  top: -30px;
+  background: #666;
+  color: #fff;
+}
+[class*="nbs-social"]:before {
+  font-family: 'IcomoonSocial';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.nbs-social-rss {
+  background: #e0812a;
+}
+.nbs-social-rss:before {
+  content: "\e005";
+}
+.nbs-social-mail {
+  background: #999;
+}
+.nbs-social-mail:before {
+  content: "\e00b";
+}
+.nbs-social-mail:hover {
+  color: #fff;
+}
+.nbs-social-facebook {
+  background: #3b5997;
+}
+.nbs-social-facebook:before {
+  content: "\e000";
+}
+.nbs-social-twitter {
+  background: #41b7d8;
+  color: #fff;
+}
+.nbs-social-twitter:before {
+  content: "\e008";
+}
+.nbs-social-googleplus {
+  background: #d64937;
+}
+.nbs-social-googleplus:before {
+  content: "\e00e";
+}
+.nbs-social-youtube {
+  background: #cd322c;
+}
+.nbs-social-youtube:before {
+  content: "\e013";
+}
+.nbs-social-vimeo {
+  background: #388fc5;
+}
+.nbs-social-vimeo:before {
+  content: "\e015";
+}
+.nbs-social-linkedin {
+  background: #0073b2;
+}
+.nbs-social-linkedin:before {
+  content: "\e024";
+}
+.nbs-social-flickr {
+  background: #ff0084;
+}
+.nbs-social-flickr:before {
+  content: "\e019";
+}
+.nbs-social-yelp {
+  background: #e11500;
+}
+.nbs-social-yelp:before {
+  content: "\e023";
+}
+.nbs-social-pinterest {
+  background: #cb2027;
+}
+.nbs-social-pinterest:before {
+  content: "\e026";
+}
+.nbs-social-github {
+  background: #000;
+  color: #fff;
+}
+.nbs-social-github:before {
+  content: "\e021";
+}
+
+</style>
+<script>
+function addEvent(element, evnt, funct){
+  if (element.attachEvent)
+   return element.attachEvent('on'+evnt, funct);
+  else
+   return element.addEventListener(evnt, funct, false);
+}
+function form_range_output_value(evt){
+
+	var id=this.id_base;
+	var index=this.index;
+ 	var	range_id=id+'['+index+']';
+	var	output_id=id+'_out['+index+']';
+	element_range=document.getElementById(range_id);
+	element_output=document.getElementById(output_id);
+	element_output.value=element_range.value+'%';
+}
+function form_range_output_value_listener(list, id){
+
+	var	list_id=id;
+	var list_element=document.getElementById(list_id);
+
+	for(i=0;i<list.length;i++){
+		
+		var	range_id=id+'['+i+']';
+		var	output_id=id+'_out['+i+']';
+		var	list_id='sub_'+id+'['+i+']';
+		
+		var input=document.createElement("input");
+		input.setAttribute("type", "range");
+		input.setAttribute("value", "0");
+		input.setAttribute("max", "100");
+		input.setAttribute("min", "0");
+		input.setAttribute("step", "10");
+		input.setAttribute("name", range_id);
+		input.setAttribute("id", range_id);
+		var output=document.createElement("output");
+		output.setAttribute("for", range_id);
+		output.setAttribute("name", output_id);
+		output.setAttribute("id", output_id);
+		var label_text=document.createTextNode(' '+list[i]);
+		var link_a=document.createElement("a");
+		link_a.setAttribute("href", "http://local-stories.com/search.php?ask="+escape(list[i]));
+		link_a.appendChild(label_text);		
+		var label=document.createElement("label");
+		label.setAttribute("for", range_id);
+		label.appendChild(link_a);
+		var listul=document.createElement("ul");
+		listul.setAttribute("id", list_id);
+		var itm=document.createElement("li");
+		itm.appendChild(input);
+		itm.appendChild(output);
+		itm.appendChild(label);
+		itm.appendChild(listul);
+		list_element.appendChild(itm);
+				
+		var element=document.getElementById(range_id);
+		element.value='0';
+				
+		element_output=document.getElementById(output_id);
+		element_output.value=element.value+'%';
+				
+		addEvent(element, 'click', form_range_output_value, false);
+		element.index=i;
+		element.id_base=id;	
+	}
+}
+function star(evt){
+
+	var id=this.id;
+	var index=this.index;
+		
+	for(e=0;e<=index;e++){
+	
+		var start_elm=document.getElementById('star['+e+']');
+		start_elm.style.setProperty('background-image','url(img/staron.gif)',null);
+	}
+	for(e=index+1;e<=3;e++){
+	
+		var start_elm=document.getElementById('star['+e+']');
+		start_elm.style.setProperty('background-image','url(img/staroff.gif)',null);
+	}
+}
+function menu(evt){
+	
+	var liste_id=this.liste;
+	
+	for(g=0;g<=3;g++){
+
+		var itl=document.getElementById('item_list['+g+']');
+		itl.style.setProperty('position','absolute',null);
+		itl.style.setProperty('top','-10000px',null);
+	}	
+	if(this.st!='up'){
+	
+		var itl=document.getElementById(liste_id);
+		document.getElementById(liste_id);
+		itl.style.setProperty('position','relative',null);
+		itl.style.setProperty('top','0px',null);
+		
+		this.st='up';
+		self.location.hash='#'+liste_id;
+	}
+	else {
+		
+		this.st='down';
+		self.location.hash='#'+'item_list[0]';
+	}
+
+}
+function load_all(){
+	
+	var list_about_you=[];
+	list_about_you[0]="Major account";
+	list_about_you[1]="Small business";
+	list_about_you[2]="Media";
+	list_about_you[3]="CEO";
+	list_about_you[4]="Buyer";
+	list_about_you[5]="Partner";
+	list_about_you[6]="CTO";
+	list_about_you[7]="Researcher";
+	list_about_you[8]="Engineer";
+	list_about_you[9]="Senior consultant";
+
+	form_range_output_value_listener(list_about_you, 'item_list[0]');
+	
+	var list_interest=[];
+	list_interest[0]='Information';
+	list_interest[1]='Business';
+	list_interest[2]='Team';
+	list_interest[3]='Production';
+	list_interest[4]='Responsability';
+	list_interest[5]='Game';
+	list_interest[6]='3D Print';
+	
+	var list_information=[];
+    list_information[0]="Happenstance and serendipity";
+    list_information[1]="Information system";
+    list_information[2]="Communication";
+    list_information[3]="Learning";
+    list_information[4]="Knowledge";
+    list_information[5]="Estimate";
+    list_information[6]="Interpretation";
+    list_information[7]="Narration";
+    list_information[8]="Influance";
+    list_information[9]="History";
+    list_information[10]="Aggregation";
+    list_information[11]="Social";
+		
+	var list_business=[];
+    list_business[0]="Innovation";
+    list_business[1]="Customers";
+    list_business[2]="Products";
+    list_business[3]="marketing";
+    list_business[4]="Parnters";
+    list_business[5]="Channels";
+    list_business[6]="Key activities";
+    list_business[7]="Key resources";
+    list_business[8]="Revenues";
+    list_business[9]="Market places";
+    list_business[10]="Forecast";
+    list_business[11]="Opportunity";
+	
+	var list_production=[];
+	list_production[0]="Problem solving";
+ 	list_production[1]="Processes";
+ 	list_production[2]="Production tools";
+ 	list_production[3]="Production management";
+ 	list_production[4]="Performance";
+ 	list_production[5]="Self management";
+ 	list_production[6]="Risks";
+ 	list_production[7]="Standards";
+	
+	var list_team=[];
+	list_team[0]="Story telling";
+	list_team[1]="Self management";
+	list_team[2]="Learning";
+	list_team[3]="Management";
+	list_team[4]="Happyness";
+	list_team[5]="Team building";
+	list_team[6]="Networking";
+	list_team[7]="Oligarchy";
+	list_team[8]="Skills";
+	list_team[9]="Communication";
+	list_team[10]="Co-workking";
+	list_team[11]="Revenues";
+	list_team[12]="Organization";
+	
+	var list_responsability=[];
+	list_responsability[0]="The end states";
+	list_responsability[1]="Libertarian";
+	list_responsability[2]="History issues";
+	list_responsability[2]="Health issues";
+	list_responsability[3]="Societal issues";
+	list_responsability[4]="Democratic issues";
+	list_responsability[5]="Environmental issues";
+	list_responsability[6]="Economic Issues";
+
+	var list_game=[];
+	list_game[0]="Recreational benefits";
+	list_game[1]="Virtualization benefits";
+	list_game[2]="Industrialization scores";
+	list_game[3]="Rules";
+	list_game[4]="Collects";
+	list_game[5]="Goals";
+	list_game[6]="Learning";
+	list_game[7]="Simplicity";
+	list_game[8]="Trainning";
+	
+	var list_print=[];
+	list_print[0]="Materials";
+	list_print[1]="Equipment";
+	list_print[2]="Uses cases";
+	list_print[3]="Integration";
+	list_print[4]="Standards";
+	
+	var list_interest_sub=[];
+	list_interest_sub[0]=list_information;
+	list_interest_sub[1]=list_business;
+	list_interest_sub[2]=list_team;
+	list_interest_sub[3]=list_production;
+	list_interest_sub[4]=list_responsability;
+	list_interest_sub[5]=list_game;
+	list_interest_sub[6]=list_print;
+	
+	form_range_output_value_listener(list_interest, 'item_list[1]');
+	
+	for(a=0;a<list_interest_sub.length;a++){
+
+		form_range_output_value_listener(list_interest_sub[a], 'sub_item_list[1]['+a+']');
+	}	
+	var tags=[];
+	tags[0]="3D Print";
+	tags[1]="3D Print offer";
+	tags[2]="3D Print your business model";
+	tags[3]="Connected Workflows objects";
+	tags[4]="About you";
+	tags[5]="About your customers";
+	tags[6]="About your RSE";
+	tags[7]="Customer segments";
+	tags[8]="Key activities";
+	tags[9]="Key resources";
+	tags[10]="Market Places";
+	tags[11]="Value Proposition";
+	tags[12]="storytelling";
+	tags[13]="natural";
+	tags[14]="Aggregation";
+	tags[15]="Agile";
+	tags[16]="teams";
+	tags[17]="bundle offer";
+	tags[18]="Business";
+	tags[19]="Business processes";
+	tags[20]="Buyer";
+	tags[21]="CEO";
+	tags[22]="Channels";
+	tags[23]="Cloud solutions";
+	tags[24]="Collects";
+	tags[25]="Communication";
+	tags[26]="Connect your production";
+	tags[27]="Connected objects";
+	tags[28]="Consulting";
+	tags[29]="Co-working";
+	tags[30]="CTO";
+	tags[31]="Customers";
+	tags[32]="Democratic issues";
+	tags[33]="Design your game - Sharing experience first";
+	tags[34]="Digital developments";
+	tags[35]="Easy deal";
+	tags[36]="Easy entreprise management";
+	tags[37]="Easy management - Find connected Resources";
+	tags[38]="Economic Issues";
+	tags[39]="Engineer";
+	tags[40]="Entreprise mashup";
+	tags[41]="Entreprise workflows";
+	tags[42]="Environmental issues";
+	tags[43]="Environmental management";
+	tags[44]="Equipment";
+	tags[45]="Estimate";
+	tags[46]="Forecast";
+	tags[47]="Game";
+	tags[48]="Game startups";
+	tags[49]="Gamification";
+	tags[50]="Goals";
+	tags[51]="Happenstance and serendipity";
+	tags[52]="Happyness";
+	tags[53]="Health issues";
+	tags[54]="History";
+	tags[55]="Industrialization scores";
+	tags[56]="Influance";
+	tags[57]="Information";
+	tags[58]="Information strategy";
+	tags[59]="Information system";
+	tags[60]="Innovation";
+	tags[61]="Innovation's games";
+	tags[62]="Integration";
+	tags[63]="Interpretation";
+	tags[64]="IT achievements";
+	tags[65]="IT Security";
+	tags[66]="IT Security and freedom";
+	tags[67]="Key activities";
+	tags[68]="Key activities and value informations";
+	tags[69]="Key connected production resources";
+	tags[70]="Key resources";
+	tags[71]="Knowledge";
+	tags[72]="Learning";
+	tags[73]="Libertarian";
+	tags[74]="Major account";
+	tags[75]="Management";
+	tags[76]="Market places";
+	tags[77]="marketing";
+	tags[78]="Materials";
+	tags[79]="Media";
+	tags[80]="Model your production";
+	tags[81]="Modeled your key activities";
+	tags[82]="Information from key partners";
+	tags[83]="Narration";
+	tags[84]="channels";
+	tags[85]="value chain";
+	tags[86]="Networking";
+	tags[87]="Oligarchy";
+	tags[88]="Opportunity";
+	tags[89]="Organization";
+	tags[90]="Partner";
+	tags[91]="Performance";
+	tags[92]="Problem solving";
+	tags[93]="Processes";
+	tags[94]="Production";
+	tags[95]="Production management";
+	tags[96]="Production tools";
+	tags[97]="Productions connected";
+	tags[98]="Products";
+	tags[99]="Recreational benefits";
+	tags[100]="Recycling of IT activities";
+	tags[101]="Research areas";
+	tags[102]="Researcher";
+	tags[103]="Responsability";
+	tags[104]="Revenues";
+	tags[105]="Risks";
+	tags[106]="Rules";
+	tags[107]="Scalable abacus";
+	tags[108]="Search and indexing";
+	tags[109]="Self management";
+	tags[110]="Senior consultant";
+	tags[111]="Simplicity";
+	tags[112]="Skills";
+	tags[113]="Small business";
+	tags[114]="Social";
+	tags[115]="Social and environmental responsibility";
+	tags[116]="Societal issues";
+	tags[117]="Standards";
+	tags[118]="Story telling";
+	tags[119]="Strategic knowledge to";
+	tags[120]="Systems integration";
+	tags[121]="Team";
+	tags[122]="Team building";
+	tags[123]="Teams organisazation";
+	tags[124]="Teams strategy";
+	tags[125]="The end states";
+	tags[126]="Trainning";
+	tags[127]="Transportation 3.0";
+	tags[128]="Transportation is a media";
+	tags[129]="Uses cases";
+	tags[130]="Virtualization benefits";
+	tags[131]="Virtualization work environment";
+	tags[132]="Visual management";
+	tags[133]="dashbord";
+	
+	var tag_elm=document.getElementById('tag_list');
+
+	for(b=0;b<=tags.length;b++){
+	
+		var option=document.createElement("option"); 
+		option.setAttribute("label", tags[b]);
+		option.setAttribute("value", tags[b]);		
+		tag_elm.appendChild(option);
+	}	
+	var cat=[];
+   	cat[0]="Information strategy";
+   	cat[1]="Teams strategy";
+   	cat[2]="Business processes";
+   	cat[3]="Connected productions";
+   	cat[4]="Environmental management";
+   	cat[5]="Recycling of IT activities";
+   	cat[6]="Transportation 3.0";
+   	cat[7]="Gamification";
+   	cat[8]="Innovation";
+   	cat[9]="Visual management";
+   	cat[10]="Cloud solutions";
+   	cat[11]="Entreprise mashup";
+   	cat[12]="Search and indexing";
+   	cat[13]="Virtualization work environment";
+   	cat[14]="3D print";
+   	cat[15]="IT Security";
+	
+	var categories_elm=document.getElementById('item_list[3]');
+	var cat_elm=document.getElementById('cat_list');	
+	var label_text2=document.createTextNode(' --Select--');
+	var option=document.createElement("option"); 
+	option.setAttribute("label", ' --Select--');
+	option.setAttribute("value", ' --Select--');
+	option.setAttribute("selected", 'selected');
+	option.appendChild(label_text2);				
+	cat_elm.appendChild(option);
+
+	for(c=0;c<=cat.length;c++){
+
+		var label_text=document.createTextNode(' '+cat[c]);
+		var link_a=document.createElement("a");
+		link_a.setAttribute("href", "http://local-stories.com/search.php?ask="+escape(cat[c]));
+		link_a.appendChild(label_text);		
+		var li=document.createElement("li");
+		li.appendChild(link_a);		
+		categories_elm.appendChild(li);		
+	
+		var label_text2=document.createTextNode(' '+cat[c]);
+		var option=document.createElement("option"); 
+		option.setAttribute("label", cat[c]);
+		option.setAttribute("value", cat[c]);
+		option.appendChild(label_text2);				
+		cat_elm.appendChild(option);
+	}	
+	for(d=0;d<3;d++){
+	
+		var start_elm=document.getElementById('star['+d+']');
+		start_elm.index=d;
+		addEvent(start_elm, 'click', star);
+	}	
+	for(f=0;f<=3;f++){
+	
+		var it=document.getElementById('item['+f+']');
+		it.liste='item_list['+f+']';
+		addEvent(it, 'click', menu);
+	}	
+}
+</script>
+</head>
+
+<body onload="load_all();">
+<header>
+	<nav role="main">
+        <nav role="banner">
+            <ul>
+                <li>
+                     <ul>
+                        <li><h1><a href="http://local-stories.com"><svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 94 94" enable-background="new 0 0 94 94" xml:space="preserve">
+<g>
+	<path fill="#D3BAA0" d="M80.4,93.6c-3.4-2.8-7.4-4.4-11.3-6c-10.3-4.8-20.6-10-30.4-16.3c-4.9-3.2-10.8-4.4-16.7-6.4
+		c-3.4-1.2-6.9-1.2-10.3-0.4c-2.5,0.8-5.4,0.8-7.4-1.6c1,0,2,0,2-1.2c2.5,0,3.4-2,4.4-3.2h0.5c2.9,0,5.4-1.2,7.8-1.6
+		c0.5,0,1-0.8,1-1.2c3.9,2.4,9.3,3.2,13.2,5.6c0.5,0.8,1.5,1.2,2.5,1.2l0,0c1,0.8,2,2,3.4,2c0.5,0,1.5,1.2,1.5-0.4
+		c2.9,0.8,6.4,1.2,8.8,3.2c1.5,1.2,3.9,1.6,4.9,3.6c-3.9-0.8-7.4-2.8-11.8-4.4c1,0.8,1,1.2,1,1.2c6.4,3.6,13.2,7.2,19.6,10.4
+		c0.5,0.4,1.5,0.4,2.5,0.8c0.5,0.8,1.5,1.2,2.5,1.6c6.4,3.6,13.2,7.2,20.1,10.4c-2,0.8-3.9,2-5.9,3.2C81.9,93.6,81.4,93.6,80.4,93.6
+		z"/>
+	<path fill="#050582" d="M35.8,0.4c3.4,2.4,6.9,5.2,10.3,7.6c8.3,6.4,13.2,13.9,15.2,23.5c0.5,2,0,3.2-2,4s-3.9,3.2-5.4,2.4
+		c-1.5-0.4-1-3.6-1.5-5.2c-2.9-8-7.4-14.7-14.7-19.9c-0.5-0.4-1-0.8-1.5-1.2C33.4,10,31.4,6.8,28,6.4C21.1,6,14.2,6.8,8.3,10
+		c-1,0.4-2,1.2-3.4,1.2c1.5-2,3.4-3.6,5.4-4.8C15.7,3.6,20.6,1.2,27,0.8c1,0,2,0.4,2.5-0.8C31.4,0.4,33.8,0.4,35.8,0.4z"/>
+	<path fill="#3A393B" d="M11.8,58.6h-0.5c-0.5-2-1-2.8-2.9-0.8c-1,0.8-2.5,1.6-3.4,2.4c-1,0.8-2-0.4-2.9,0c-0.5-0.4-1-1.2-2-1.2
+		c0-0.8,0-1.6,0-2c1.5-1.6,1.5-4,2.5-6c2-6.4,6.4-11.9,10.8-17.1c0.5-0.8,1-0.8,2-0.8c0.5,2.8,2.9,3.2,4.9,4l0,0c0,0.4,0,1.2,1,1.2
+		c0.5,0,1-0.4,1-1.2h0.5h0.5l0,0l0,0c0.5,0.4,1,0.8,1,1.6c-2,2-4.4,4-2.9,7.6c-0.5,0.4-1,0.8-2,1.2c-1,0-1.5,0.4-2,1.2
+		c-1.5,0.4-1.5,2-2.5,3.2c-1.5,2-0.5,2.4,1.5,2.8l0,0C16.2,56.2,12.8,56.2,11.8,58.6z"/>
+	<path fill="#EACAA3" d="M19.1,47c0.5-0.4,1-0.8,2-1.2c0.5,0.8,1,0.8,1,0c0.5-1.2,1-2,1.5-3.2c-0.5,4,2,6,5.4,7.6
+		c17.7,8.4,34.8,16.7,52,25.1c3.4,1.6,6.9,3.6,9.8,5.2c3.9,2,3.9,2.4,2,6c-2.5-1.2-4.9-2.4-7.4-3.6c-1.5-0.8-1.5,0-1.5,1.2
+		c-1,0-1.5,0.4-2.5-0.4c-1-2.8-2.9-3.6-5.9-4l0,0c-1-0.8-2.5-0.8-3.4-1.2l0,0c-1.5-1.2-2.5-3.6-5.4-2.8c-1-0.4-1.5-0.4-2.5-0.8
+		c-1-2.8-4.4-2.4-6.4-4c-1-0.8-2.5-1.2-3.4-0.8l0,0c-1-1.6-3.4-2.4-4.9-3.6c-2.5-2-5.9-2.4-8.8-3.2c-1.5-0.8-2.9-2-4.9-1.6l0,0
+		c0-1.6-1.5-0.8-2.5-1.2c-3.9-2.4-9.3-3.2-13.2-5.6l0,0c0-0.8,0-1.2-0.5-1.6c-2-1.2-1.5-2.8-0.5-4.4C20.1,48.6,19.1,47.8,19.1,47z"
+		/>
+	<path fill="#050582" d="M2.5,30.7c3.4-4,7.4-7.2,11.8-9.6c8.8-4.8,21.1-0.4,25,7.6c2,4.4,2,4.4-2,6.8c-0.5,0.4-1.5,0.8-2,1.2
+		c-1.5,1.2-2,0.4-2.9-0.8c-2.9-7.6-9.3-10.4-17.2-10.8c-1.5,0-2.5,0-3.4,1.2C9.3,28.7,5.9,29.5,2.5,30.7z"/>
+	<path fill="#A27D5F" d="M88.8,90.4c-6.9-3.2-13.7-6.8-20.1-10.4c-1-0.4-2-0.8-2.5-1.6c2.5-0.8,4.4,1.2,6.9,2c1,0.8,2,0.8,2.9,1.6
+		c4.9,2.4,10.3,4,14.7,6.8c0,0.4,0,0.8,0,1.6C89.8,90,89.3,90.4,88.8,90.4z"/>
+	<path fill="#D3BAA0" d="M90.3,90c0-0.4,0-0.8,0-1.6c2-0.8,0.5-1.2,0-1.6c-2-1.2-4.4-1.6-5.9-3.2c0-0.8,0-2,1.5-1.2
+		c2.5,1.2,4.9,2.4,7.4,3.6C92.7,88,92.7,90,90.3,90z"/>
+	<path fill="#A27D5F" d="M24,42.6c-0.5,1.2-1,2-1.5,3.2c-0.5,0.8-0.5,0.8-1,0c-2-3.2,1-5.2,2.9-7.6C25,39.8,24,41,24,42.6z"/>
+	<path fill="#A27D5F" d="M20.1,37c-2-1.2-4.4-1.6-4.9-4c2,0,3.4,1.2,4.9,2C20.1,35.8,20.1,36.6,20.1,37z"/>
+	<path fill="#D3BAA0" d="M20.1,37c0-0.8,0-1.6,0-2.4c1,0.4,2.5,0.4,2.9,2l0,0l0,0c0-0.4-0.5-0.4-0.5,0H22
+		C21.1,37.4,20.6,37.4,20.1,37L20.1,37z"/>
+	<path fill="#A27D5F" d="M1.5,60.1c1-0.4,2,0.8,2.9,0c0.5,0.4,1.5,1.2,2,1.6c0,1.2-1,1.2-2,1.2C3.4,62.1,2,61.7,1.5,60.1z"/>
+	<path fill="#A27D5F" d="M11.8,58.6c1-2,4.4-2,4.9-4.4c1.5,0.4,2.5,1.6,3.9,1.6l0,0c0,0.4-0.5,1.2-1,1.2
+		C17.2,57.4,14.7,58.2,11.8,58.6z"/>
+	<path fill="#D3BAA0" d="M20.6,55.4c-1.5,0-2.5-1.2-3.9-1.6l0,0c-0.5-2,1-4,1-6c0.5-0.8,1-1.2,2-1.2c0,0.8,1,1.6,0,2.8
+		c-1,1.6-1.5,3.2,0.5,4.4C20.6,54.2,20.6,55,20.6,55.4z"/>
+	<path fill="#A27D5F" d="M17.7,48.2c0,2-1.5,3.6-1,6c-2-0.4-2.9-0.8-1.5-2.8C15.7,50.2,15.7,48.6,17.7,48.2z"/>
+	<path fill="#A27D5F" d="M20.1,37c0.5,0,1,0,2,0c0,0.4,0,1.2-1,1.2S19.6,37.8,20.1,37z"/>
+	<path fill="#A27D5F" d="M22.1,37c0-0.4,0.5-0.4,0.5,0C22.6,37,22.6,37,22.1,37z"/>
+	<path fill="#D3BAA0" d="M65.2,74.9c-3.9-0.4-7.4-2-9.8-4.8c1.5-0.4,2.5-0.4,3.4,0.8C60.8,72.5,63.8,72.5,65.2,74.9z"/>
+	<path fill="#D3BAA0" d="M81.9,83.2c-2-1.2-4.9-1.6-5.9-4C79,79.7,81.4,80.9,81.9,83.2z"/>
+	<path fill="#D3BAA0" d="M72.6,78.5c-2-0.4-4.4-0.4-5.4-2.8C70.1,74.9,71.1,77.3,72.6,78.5z"/>
+	<path fill="#D3BAA0" d="M76.5,79.7c-1,0-2,0.8-2.9,0.4c0-0.4-1-0.8-0.5-1.6C74.1,78.9,75.1,78.5,76.5,79.7z"/>
+</g>
+</svg> Local Stories</a></h1></li>
+                        <li><h2>Happenstance and serendipity applied to information</h2></li>
+                        <li><h3>Connected Productions</h3></li>
+                    </ul>
+                </li> 
+            </ul>
+        </nav>
+        <nav role="contentinfo">
+            <form>
+                <fieldset>
+                    <ul> 
+                        <li>
+                        	<h3 id="item[0]">ABOUT YOU</h3>
+                            <ul id="item_list[0]"></ul>
+                        </li>
+                        <li>
+                        	<h3 id="item[1]">ABOUT YOUR INTERESTS</h3>
+                            <ul id="item_list[1]"></ul>
+                        </li>
+                     </ul>
+                </fieldset>
+            </form>   
+       </nav>
+        <nav role="navigation">
+        <ul> 
+            <li>
+            	<h3 id="item[2]">OUR ACTIVITIES</h3>
+                <ul id="item_list[2]">
+                    <li>Consulting
+                        <ul>
+                         <li>Easy deal
+                            <ul>
+                                <li>bundle offer</li>
+                                <li>Co-working</li>  
+                                <li>Agile teams</li>
+                                <li>Scalable abacus</li>
+                            </ul>
+                         </li>
+                         <li>Strategic knowledge to
+                            <ul>
+                                <li>Happenstance and serendipity</li>
+                                <li>Teams organisazation</li>
+                                <li>Network of the value chain</li>
+                                <li>Network of the channels</li>
+                                <li>Easy entreprise management</li>
+                                <li>Transportation 3.0</li>
+                                <li>Gamification</li>
+                                <li>Connected productions</li>
+                                <li>Systems integration</li>
+                                <li>Cloud solutions</li>
+                                <li>Virtualization work environment</li>
+                                <li>Recycling of IT activities</li>
+                             </ul>
+                            </li>
+                        <li>IT achievements
+                            <ul>
+                                <li>Digital developments</li>
+                                <li>Entreprise workflows</li>
+                                <li>Search and indexing</li>
+                                <li>Entreprise mashup</li>
+                                <li>Connected objects</li>
+                            </ul>
+                         </li>
+                        <li>Research areas              
+                            <ul>       
+                                <li>Happenstance and serendipity</li>
+                                <li>Social and environmental responsibility</li>
+                                <li>Teams organisazation</li>
+                                <li>3D print</li>
+                                <li>IT Security and freedom</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            <li>Game startups
+                <ul>
+                    <li>Design your game - Sharing experience first
+                        <ul>
+                            <li>Add Customer segments</li>
+                            <li>Add Value Proposition</li>
+                            <li>Add Market Places</li>
+                        </ul>
+                    </li>
+                    <li>Modeled your key activities - Information from key partners
+                        <ul>
+                            <li>Add Key activities</li>
+                            <li>Add Key resources</li>
+                            <li>Transportation is a media</li>
+                        </ul>
+                    </li>
+                    <li>Affine your storytelling - Be natural
+                        <ul>
+                            <li>About you</li>
+                            <li>About your RSE</li>
+                            <li>About your customers</li>
+                        </ul>
+                    </li>
+                    <li>Easy management - Find connected Resources
+                        <ul>
+                            <li>Key activities and value informations</li>
+                            <li>Key connected production resources</li>
+                            <li>Your dashbord</li>
+                        </ul>
+                    </li>
+                    <li>3D Print your business model - Connected Workflows objects
+                        <ul>
+                            <li>Innovation's games</li>
+                            <li>3D Print offer</li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+             <li>Productions connected
+                <ul>
+                    <li>Model your production</li>
+                    <li>Connect your production</li>
+                </ul>
+            </li> 
+            </ul>
+            </li>
+            <li>
+            	<h3 id="item[3]">CATEGORIES</h3>
+            	<ul id="item_list[3]"></ul>
+            </li>  
+        </ul>
+        </nav>
+    </nav>
+</header>
+<article></article>
+<aside>
+
+    <nav role="toolbar">
+        <p>Improve the smart menu</p>
+        <ul>
+            <li>
+                <p>YOUR PROFIL</p>
+                <form>
+                    <fieldset>
+                        <input id="custom[content]" name="custom[content]" type="submit" value="Customize"/>
+                        <input type="email" id="custom[email]" name="custom[email]" placeholder="Email (Option)" />
+                        <input id="custom[profil]" name="custom[profil]" type="submit" value="Save your profil"/>
+                    </fieldset>
+                </form>
+                <p>OR</p>
+                <form>
+                    <fieldset>
+                        <input type="text" id="login[login]" name="login[login]" placeholder="Login or Email" />
+                        <input id="login[in]" name="login[in]" type="submit" value="Login"/>
+                    </fieldset>
+                </form>
+            </li>
+            <li>
+            	<p>TAGS</p>
+                <form>
+                	<fieldset>
+                        <input list="tag_list" type="text" id="tag_field" autocomplete="on" placeholder="One at a time" />
+                        <datalist id="tag_list"></datalist>
+                        <input id="tag" name="tag" type="submit" value="Add"/>
+                    </fieldset>
+                </form>
+            </li>
+            <li>
+            	<p>CATEGORIES</p>
+                <form>
+                	<fieldset>
+                        <select id="cat_list" name="cat_list">
+                        </select>
+                    </fieldset>
+                </form>
+            </li>
+            <li>
+            	<p>RATING</p>
+                <form>
+                	<fieldset>
+                      <input class="star" id="star[0]" name="star[0]" disable />
+                      <input class="star" id="star[1]" name="star[1]" disable />
+                      <input class="star" id="star[2]" name="star[2]" disable />
+                    </fieldset>
+               </form>
+            </li>
+            <li>
+            	<p>SHARING</p>
+                <ul>
+                    <li><a href="#" class="nbs-social-rss"></a></li>
+                    <li><a href="#" class="nbs-social-mail"></a></li>
+                    <li><a href="#" class="nbs-social-facebook"></a></li>
+                    <li><a href="#" class="nbs-social-twitter"></a></li>
+                    <li><a href="#" class="nbs-social-googleplus"></a></li>
+                    <li><a href="#" class="nbs-social-linkedin"></a></li>
+                    <li><a href="#" class="nbs-social-flickr"></a></li>
+                    <li><a href="#" class="nbs-social-youtube"></a></li>
+                    <li><a href="#" class="nbs-social-vimeo"></a></li>
+                    <li><a href="#" class="nbs-social-pinterest"></a></li>
+                    <li><a href="#" class="nbs-social-yelp"></a></li>
+                </ul>
+            </li>
+            <li>
+            	<p>FAVORITE</p>
+                <form>
+                	<fieldset>
+                 		<input id="fav" name="fav" type="submit" value="Add"/>
+                	</fieldset>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</aside>
+</body>
+</html>
